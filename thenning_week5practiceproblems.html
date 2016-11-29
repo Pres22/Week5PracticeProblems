@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <script src="thenning_week5practiceproblems.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+
+      var num1 = Number(prompt("Enter number 1: "));
+      var num2 = Number(prompt("Enter number 2: "));
+
+      document.write( num1 + " & " + num2 + " = " + bitwiseAnd(num1, num2));
+      document.write("<br>" + num1 + " | " + num2 + " = " + bitwiseOr(num1, num2));
+      document.write("<br>" + num1 + " ^ " + num2 + " = " + bitwiseXor(num1, num2));
+      document.write("<br>" + num1 + " << " + num2 + " = " + bitwiseLeftShift(num1, num2));
+      document.write("<br>" + num1 + " >> " + num2 + " = " + bitwiseRightShift(num1, num2));
+
+      var text = prompt("Enter a string: ");
+      var subStr = prompt("What would you like removed?");
+
+      document.write("<br>");
+      document.write(removeSubStr(text, subStr));
+
+      var repeat = prompt("How many times would you like to repeat 'I am awesome'?");
+      
+      document.write(awesomeRepeat());
+
+      // I couldn't get a function to work, so I just wrote it here
+      var palinStr = String(prompt("Enter a string to test if it's a palindrome: "));
+      var reverseStr = palinStr.split("").reverse().join("");
+      if (reverseStr === palinStr) 
+      {
+        document.write("<br>" + palinStr + " is a palindrome")
+      }
+      else 
+      {
+        document.write("<br>" + palinStr + " is not a palindrome")
+      }
+      
+      var sortNum1 = Number(prompt("Enter number 1 to sort: "))
+      var sortNum2 = Number(prompt("Enter number 2 to sort: "))
+      var sortNum3 = Number(prompt("Enter number 3 to sort: "))
+
+      document.write(sort(sortNum1, sortNum2, sortNum3));
+
+      var percentage = Number(prompt("Enter percentage: "));
+
+      document.write(getLetterGrade(percentage));
+
+    </script>
+
+    <noscript>
+      Please enable JavaScript!
+    </noscript>
+  </body>
+</html>
